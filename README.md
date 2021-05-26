@@ -6,7 +6,7 @@ This is a very quick Data Science/ML demo that shows the power of the Java UDF c
 
 ### PRE-REQUISITES
 
-1. You will need to get access to a demo Snowflake account with Java. Please post in `#feat-java-udf` to get a Java UDF enable Snowflake account.
+1. You will need to get access to a demo Snowflake account with Java. Please read the instructions in `#feat-java-udf` to request having Java UDFs enabled for your Snowflake account.
 2. Make sure you have Docker Desktop installed: https://www.docker.com/products/docker-desktop
 
 ### SETUP
