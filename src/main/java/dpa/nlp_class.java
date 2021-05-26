@@ -30,6 +30,9 @@ public class nlp_class {
     // This is the UDF that can be called from Snowflake SQL.
     public Integer sentiment_method(String s)
     {
+            if(s == null || s.isEmpty()){
+                return 0;
+            }
             Annotation annotation = pipeline.process(s);
             for (CoreMap sentence : annotation.get(CoreAnnotations.SentencesAnnotation.class)) {
                 Tree tree = sentence.get(SentimentCoreAnnotations.SentimentAnnotatedTree.class);
@@ -44,6 +47,9 @@ public class nlp_class {
     }
 
     public String ner_method(String s) {
+        if(s == null || s.isEmpty()){
+            return "";
+        }        
         CoreDocument doc = new CoreDocument(s);
         nerizer.annotate(doc);
 
