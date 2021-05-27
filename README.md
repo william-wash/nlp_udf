@@ -21,14 +21,13 @@ This is a very quick Data Science/ML demo that shows the power of the Java UDF c
 
 4. From within the parent directory of `ner_udf`, run the docker container with a volume mapped to the current directory: `docker run -it --rm -v "$PWD":/root hseeberger/scala-sbt:8u222_1.3.5_2.13.1`
 
-5. Download https://drive.google.com/drive/folders/1W0qwNRBe0uBhLEZAGotbCB6kbxdHGUn4?usp=sharing and extract all the `jar` files into the `ner_udf/lib` folder. You would have to create a new `lib` folder.
+5. Download https://drive.google.com/drive/folders/1W0qwNRBe0uBhLEZAGotbCB6kbxdHGUn4?usp=sharing and extract all the `jar` files into the `nlp_udf/lib` folder. 
 
 6. Change into the `ner_udf` directory and execute `sbt run` to compile and run the code. You should not see any output other than a simple print out.
 
 7. Run `sbt assembly` to create a "fat" jar that we will upload into a Snowflake stage.
 
-8. Type “exit” to exit out of the container. Change into “target/scala-2.12” (or similar) directory to see the newly created JAR file that is named something like `root_2_12-0.1.0-SNAPSHOT.jar`. Rename this file to `ner-udf-assembly-1.0.jar`.
-Run “pwd” to view the path to the JAR file and copy it to the clipboard.
+8. Type “exit” to exit out of the container. Change into “target/scala-2.12” (or similar) directory to see the newly created JAR file that is named `nlp-udf-assembly-1.0.jar`. Run “pwd” to view the path to the JAR file and copy it to the clipboard.
 
 9. Go to the project home
 
